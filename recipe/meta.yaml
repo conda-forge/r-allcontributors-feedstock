@@ -1,4 +1,4 @@
-{% set version = '0.1.1' %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/allcontributors_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/allcontributors/allcontributors_{{ version }}.tar.gz
-  sha256: ea9d2ae1673ac78044ed14770802c51f82440145d4469a4d24a767f4f9f90a69
+  sha256: f76e7717ff023d3336b35627a406360ecd3bca5455ca98cc34a68edaf8897410
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -54,10 +54,8 @@ about:
   home: https://github.com/ropenscilabs/allcontributors
   doc_url: https://docs.ropensci.org/allcontributors/
   license: GPL-3.0-only
-  summary: Acknowledge all contributors to a project via a single function call. The function
-    appends to a 'README' or other specified file(s) a table with names of all individuals
-    who contributed via code or repository issues.  The package also includes several
-    additional functions to extract and quantify contributions to any repository.
+  summary: Acknowledge all contributors to a project via a single function call. The function appends to a 'README' or other specified file(s) a table with names of all individuals who contributed via code or repository issues.  The package also includes several additional functions to extract and quantify contributions
+    to any repository.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
